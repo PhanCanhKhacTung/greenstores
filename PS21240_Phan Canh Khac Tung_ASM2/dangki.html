@@ -1,0 +1,178 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phan Cảnh Khắc Tùng_Green Store</title>
+    <link rel="stylesheet" href="/css/dangki.css">
+</head>
+<body>
+    <script>
+
+        var dh = null;
+        function tg() {
+            var now = new Date();
+            var h = now.getHours();
+            var m = now.getMinutes();
+            var s = now.getSeconds();
+            document.getElementById("dongho").innerHTML = h + ":" + m + ":" + s;
+    
+        }
+    
+    
+        dh = setInterval("tg()", 1000);
+        function stop() {
+    
+            clearInterval(dh);
+            dh = null;
+        }
+        function start() {
+            if (dh == null) {
+                dh = setInterval("tg()", 1000);
+            }
+        }
+    </script>
+    <title>Đăng Ký Thành Viên</title>
+</head>
+<body>
+    <article>
+        <div class="container_12">
+            <div class="linklk"> <a href="index.html">Trang chủ </a>> Đăng ký</div>
+            <div class="tieude">
+                <h2>ĐĂNG KÝ</h2>
+            </div>
+            <div class="form">
+                <div class="row">
+                    <label class="item" for="ho">Họ và tên đệm:</label><input type="text" id="ho" name="ho"
+                        value="">
+                </div>
+                <div class="clear_fix"></div>
+                <div class="row">
+                    <label class="item" for="ten">Tên:</label> <input type="text" id="ten" name="ten" value="">
+                </div>
+                <div class="clear_fix"></div>
+                <div class="row" id="ngaysinh">
+                    <select name="ngay">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="clear_fix"></div>
+                <div class="row">
+                    <label class="item">Giới tính:</label>
+                    <input type="radio" id="na" name="gender" value="Nam" checked="checked"><label
+                        for="na">Nam</label>
+                    <input type="radio" id="nu" name="gender" value="Nữ"><label for="nu">Nữ</label>
+                </div>
+                <div class="clear_fix"></div>
+                <div class="row">
+                    <label class="item" for="diachi">Địa chỉ:</label> <input type="text" id="diachi" name="diachi"
+                        value="">
+                </div>
+                <div class="clear_fix"></div>
+
+                <div class="row">
+                    <label class="item" for="sdt">Số điện thoại:</label>
+                    <input type="number" id="sdt" name="sdt" value="">
+                </div>
+                <div class="clear_fix"></div>
+
+                <div class="row">
+                    <label class="item">Sở thích:</label>
+                    <input type="checkbox" id="nghenhac" name="sothich" value="Nghe nhạc"><label for="dabanh"> Nghe 
+                        nhạc</label>
+                    <input type="checkbox" id="muasam" name="sothich" value="Muasam"><label for="nhayday">Mua
+                        sắm</label>
+
+                    <input type="checkbox" id="xemphim" name="sothich" value="Xem phim"><label for="loco">Xem
+                        phim</label>
+                    <input type="checkbox" id="sothichkhac" name="sothich" value="Sở Thích Khác"><label
+                        for="sothichkhac">Sở thích khác</label>
+                </div>
+        <script>
+
+            var form_ngaysinh = '<label class="item">Ngày Sinh</label>';
+            form_ngaysinh += '<select id="ngay">'
+
+            for (var i = 1; i <= 31; i++) {
+                form_ngaysinh += '<option value="' + i + '">' + i + '</option>';
+            }
+
+            form_ngaysinh += '</select><select id="thang">'
+
+            for (var i = 1; i <= 12; i++) {
+                form_ngaysinh += '<option value="' + i + '">' + i + '</option>';
+            }
+
+            form_ngaysinh += '</select><select id="nam">'
+
+            for (var i = 1990; i <= 2005; i++) {
+                form_ngaysinh += '<option value="' + i + '">' + i + '</option>';
+            }
+
+            document.getElementById("ngaysinh").innerHTML = '</select>' + form_ngaysinh;
+
+
+            function submit() {
+                var ho = document.getElementById("ho").value.trim();
+                var ten = document.getElementById("ten").value.trim();
+                var sdt = document.getElementById("sdt").value.trim();
+                var ngay = document.getElementById("ngay").value;
+                var thang = document.getElementById("thang").value;
+                var nam = document.getElementById("nam").value;
+                var diachi = document.getElementById("diachi").value.trim();
+                var gt = document.getElementsByName("gender");
+                var st = document.getElementsByName("sothich");
+
+                var gioitinh = "";
+                var sothich = "";
+
+                if (ho == "") {
+                    alert("Vui lòng nhập Họ và tên đệm");
+                    return;
+                }
+                if (ten == "") {
+                    alert("Vui lòng nhập Tên");
+                    return;
+                }
+
+                for (var i = 0; i < gt.length; i++) {
+                    if (gt[i].checked) {
+                        gioitinh = gt[i].value;
+                        break;
+                    }
+                }
+                if (diachi == "") {
+                    alert("Vui lòng nhập địa chỉ");
+                    return;
+                }
+                if (sdt == "") {
+                    alert("Vui lòng nhập SĐT");
+                    return;
+                }
+
+                for (var i = 0; i < st.length; i++) {
+                    if (st[i].checked) {
+                        sothich +=  " - "+ st[i].value+"\n" ;
+                    }
+                }
+                if (sothich == "") {
+                    alert("Vui lòng chọn 1 sở thích");
+                    return;
+                }
+
+                var result = "Đăng Ký Thành Công"
+                    + "\n+ Họ Tên: " + ho + " " + ten
+                    + "\n+ Ngày Sinh: " + ngay + "-" + thang + "-" + nam
+                    + "\n+ Giới Tính: " + gioitinh
+                    +"\n+ Địa chỉ: " + diachi
+                    + "\n+ Số Điện Thoại: " + sdt
+                    + "\n+ Sở Thích: " + sothich;
+                alert(result);
+            }
+        </script>
+            <div class="submit">
+                <button id="dangki" onclick="return submit();">Đăng Ký</button>
+            </div>
+    </form>
+</body>
+</html>

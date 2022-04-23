@@ -1,0 +1,63 @@
+.container{
+    width:100%;
+    height:100%;
+    margin:auto;
+}
+.container .khung{
+    width:80%;
+    height:100%;
+    margin:auto;
+    
+}
+#maps{
+    height:12px;
+    text-align:center;
+}
+.fpoly{
+    
+    background-color:darkgreen;
+    color:yellow;
+    height:50px;
+    width:100%;
+}
+.fpoly-1{
+    margin-top:-20px;
+    background-color:darkgreen;
+    color:yellow;
+    height:50px;
+    width:100%;
+}
+.fpoly-1 h2{
+    padding-left:12px;
+    padding-top:12px;
+}
+.fpoly-2{
+    margin-top:-20px;
+    background-color:darkgreen;
+    color:yellow;
+    height:50px;
+    width:100%;
+}
+.fpoly-2 h2{
+    padding-left:12px;
+    padding-top:12px;
+}
+.fpoly-3{
+    margin-top:-20px;
+    background-color:darkgreen;
+    color:yellow;
+    height:50px;
+    width:100%;
+}
+.fpoly-3 h2{
+    text-align:Center;
+    padding-top:12px;
+}
+.fpoly h2{
+    padding-left:12px;
+    padding-top:12px;
+}
+.bang table{
+    width:100%;
+}
+</style>

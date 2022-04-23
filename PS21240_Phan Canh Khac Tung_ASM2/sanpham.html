@@ -1,0 +1,389 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phan Cảnh Khắc Tùng_Green Store</title>
+    <link rel="stylesheet" href="/css/sanpham.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script type="text/javascript" src="/sanpham.js"></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .wrapper {
+        float: left;
+
+        width: 700px;
+        margin-top: 77px;
+    }
+
+    .monHang {
+        width: 230px;
+        position: relative;
+        height: 270px;
+        float: left;
+        margin-bottom: 130px;
+
+    }
+
+    .monHang>#hinh {
+
+        margin-bottom: 20px;
+
+    }
+
+    .muaHang {
+        height: 38px;
+        position: absolute;
+        top: 290px;
+        border: 1px solid #0a8202;
+        width: 200px;
+        font-weight: bold;
+        color: red;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .gia {
+        position: absolute;
+        float: left;
+        top: 8px;
+        left: 12px;
+    }
+
+    .themHang {
+        float: right;
+    }
+
+    .themHang button {
+        width: 80px;
+        height: 35px;
+    }
+
+    .name {
+        position: absolute;
+        top: 255px;
+        left: 70px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+    }
+
+    .nutMua {
+
+        background-color: #06b21a;
+        color: rgb(25, 215, 11);
+        font-weight: bold;
+        border: none;
+    }
+
+    .nutMua:hover {
+        background-color: rgb(219, 21, 21);
+        color: rgb(31, 223, 10);
+        font-weight: bold;
+    }
+
+    h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 30px;
+        margin-top: 70px;
+        margin-bottom: 40px;
+        width: 500px;
+        color: #048202;
+    }
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5em;
+        color: #028220;
+    }
+
+    .container2 {
+        margin-top: 20px;
+        float: right;
+        width: 400px;
+
+    }
+
+    td {
+        padding-right: 20px;
+    }
+
+    .Xoa {
+        background-color: #028213;
+        color: rgb(22, 230, 15);
+        padding: 5px 10px 5px 10px;
+        border: none;
+        margin-left: 20px;
+    }
+
+    .red {
+        color: red;
+    }
+
+    .gioHangMua {
+        margin-top: 20px;
+        height: 500px;
+        overflow-y: scroll;
+        border: 1px solid #158202;
+    }
+
+    .container2>h3 {
+        float: right;
+        margin: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #158202;
+    }
+
+    .container2 h1>img {
+
+        position: absolute;
+        bottom: -327px;
+        padding-left: 10px;
+      
+    }
+
+    input:hover {
+        background-color: darkseagreen;
+    }
+
+    .soLuong {
+
+        width: 40px;
+        height: 20px;
+        position: relative;
+    }
+
+    .Tang {
+        border: 1px solid black;
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        top: -10px;
+        left: 35px;
+        text-align: center;
+        padding-top: -10px;
+        font-weight: bold;
+        font-size: 1.1em;
+        border-radius: 1px;
+
+    }
+
+    .Giam {
+
+        padding-bottom: 18px;
+        width: 30px;
+        height: 18px;
+        font-size: 10px;
+        position: absolute;
+        top: 13px;
+        left: 35px;
+        border: 1px solid black;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1em;
+        border-radius: 1px;
+
+    }
+
+    .HienSo {
+        position: absolute;
+        top: 0px;
+        left: 7px;
+        color: black;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .nutThem {
+        z-index: -1;
+    }
+    .container {width:1200px; margin: auto;}
+    header {
+    width:1200px;
+    height:400px; 
+    background-color: rgb(253, 66, 175);
+    background-image: url(images/maxresdefault.jpg);
+    background-size: 100%;
+    margin:auto;
+}
+   .container > nav {
+    height:60px;
+    background-color: rgb(52, 180, 240);
+    text-align:center;
+    margin-bottom: 0px;
+    color:rgb(255, 255, 255);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+   .container > main > article {
+    width:100%;
+    background-color:rgb(241, 192, 100);
+    height: 500px;
+    float:right;
+    margin-bottom: 0px;
+    background-image: url(images/R.jfif);
+    background-size: 100%;
+}
+   .container > footer {
+    height:50px;
+    background-color: rgb(40, 240, 206);
+    clear:both;
+}
+   .container nav a {
+    text-align: center;
+    display:inline-block;
+    padding:10px;
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    font-size:20px;
+    margin-right: 10px;
+    line-height: 40px;
+}
+    .container a:hover {
+    background-color:rgb(243, 100, 57);
+}
+    .container aside ul {
+    margin: 0px ; padding:0px; list-style: none;
+    text-indent: 10px;
+    font-size: 20px;
+    color: rgb(245, 245, 245);
+}
+    .container aside ul li {
+    border-bottom: 1px solid black;
+    padding: 10px 0 10px 30px;
+    background: url(images/new-icon.gif) no-repeat 6px 5px;
+}
+    .container aside ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+    .container footer p {
+    text-align: center;
+    padding-top: 20px;
+}
+</style>
+<script>
+
+    var dh = null;
+    function tg() {
+        var now = new Date();
+        var h = now.getHours();
+        var m = now.getMinutes();
+        var s = now.getSeconds();
+        document.getElementById("dongho").innerHTML = h + ":" + m + ":" + s;
+
+    }
+
+
+    dh = setInterval("tg()", 1000);
+    function stop() {
+
+        clearInterval(dh);
+        dh = null;
+    }
+    function start() {
+        if (dh == null) {
+            dh = setInterval("tg()", 1000);
+        }
+    }
+</script>
+    <body>
+        <div class="container">
+            <header>
+                <div class="box1 ">
+                    <div class="container_1">
+                        <span id="dongho"></span>
+            </header>
+            <nav>
+                <a href="index.html" target="page"><strong>Trang Chủ</strong></a> 
+                <a href="sanpham.html" target="page"><strong>Sản Phẩm</strong></a>
+                <a href="dangnhap.html" target="page"><strong>Đăng nhập</strong></a>  
+                <a href="dangki.html" target="page"><strong>Đăng Kí</strong> </a>
+            </nav>
+            <main>
+                <article>
+                    <iframe name="page" width="100%" height="100%"></iframe>
+                </article>
+                <aside>
+                   
+                </aside>
+            </main>
+        <div class="container_12 ">
+            <div class="wrapper ">
+                <div class="monHang">
+                    <img id="hinh" src="images/4.jpg" width="200" height="250">
+                    <p class="name">Giày 1</p>
+                    <div class="muaHang">
+                        <div class="gia"> <span class="soTien">320.000₫</span></div>
+                        <div class="themHang"> <button class="nutMua"
+                                onclick="themMatHang('images/4.jpg','Giày 1',320.000,'A')">
+                                Mua</button></div>
+                    </div>
+                </div>
+                <div class="monHang">
+                    <img id="hinh" src="images/5.jpg" width="200" height="250">
+                    <p class="name">Giày 2</p>
+                    <div class="muaHang">
+                        <div class="gia"> <span class="soTien">300.000₫</span></div>
+                        <div class="themHang"> <button class="nutMua"
+                                onclick="themMatHang('images/5.jpg','Giày 2',300.000,'B')">
+                                Mua</button></div>
+                    </div>
+                </div>
+                <div class="monHang">
+                    <img id="hinh" src="images/7.jpg" width="200" height="250">
+                    <p class="name">Giày 3</p>
+                    <div class="muaHang">
+                        <div class="gia"> <span class="soTien">280.000₫</span></div>
+                        <div class="themHang"> <button class="nutMua"
+                                onclick="themMatHang('images/7.jpg','Giày 3',280.000,'C')">
+                                Mua</button></div>
+                    </div>
+                </div>
+                <div class="monHang">
+                    <img id="hinh" src="images/6.jpg" width="200" height="250">
+                    <p class="name">Giày 4</p>
+                    <div class="muaHang">
+                        <div class="gia"> <span class="soTien">370.000₫</span></div>
+                        <div class="themHang"> <button class="nutMua"
+                                onclick="themMatHang('images/6.jpg','Giày 4',370.000,'D')">
+                                Mua</button></div>
+                    </div>
+                </div>
+                <div class="monHang">
+                    <img id="hinh" src="images/8.jpg" width="200" height="250">
+                    <p class="name">Giày 5</p>
+                    <div class="muaHang">
+                        <div class="gia"> <span class="soTien">340.000₫</span></div>
+                        <div class="themHang"> <button class="nutMua"
+                                onclick="themMatHang('images/8.jpg','Giày 5',370.000,'E')">
+                                Mua</button></div>
+                    </div>
+                </div>
+                <div class="monHang">
+                    <img id="hinh" src="images/9.jpg" width="200" height="250">
+                    <p class="name">Giày 6</p>
+                    <div class="muaHang">
+                        <div class="gia"> <span class="soTien">310.000₫</span></div>
+                        <div class="themHang"> <button class="nutMua"
+                                onclick="themMatHang('images/9.jpg','Giày 6',370.000,'F')">
+                                Mua</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container2 ">
+                <h1>Giỏ hàng<img src="images/icons8-shopping-cart-96 (1).png" alt=""></h1>
+                <div class="gioHangMua" id="gioMuaHang">
+                    <!-- Mặt hàng sẽ được thêm vào đây -->
+                </div>
+                <h3 id="tongTien">Tổng tiền : 0</h3>
+            </div>
+
+        </div>
+   
+        
+    </body>
+</html>
